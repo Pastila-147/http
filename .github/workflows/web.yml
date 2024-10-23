@@ -98,8 +98,5 @@ jobs:
         run: npm run build 
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-#          токен
-          github_token: ${{ secrets.PASTILA }}
-          publish_dir: ./dist
+        id: deployment
+        uses: actions/deploy-pages@v4
